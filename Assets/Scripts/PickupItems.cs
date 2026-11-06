@@ -1,4 +1,4 @@
-using UnityEngine;
+/*using UnityEngine;
 
 public class PickupItems : MonoBehaviour
 {
@@ -33,3 +33,4 @@ public class PickupItems : MonoBehaviour
     }
 
 }
+*/

@@ -4,7 +4,12 @@
 TagManager:
   serializedVersion: 3
   tags:
-  - Pickup
+  - Corpo
+  - Pata
+  - Cabeca
+  - Pata1
+  - Perna
+  - Perna1
   layers:
   - Default
   - TransparentFX

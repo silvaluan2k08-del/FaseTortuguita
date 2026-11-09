@@ -4,12 +4,12 @@
 TagManager:
   serializedVersion: 3
   tags:
-  - Corpo
-  - Pata
   - Cabeca
-  - Pata1
-  - Perna
-  - Perna1
+  - Casco
+  - PernaEsquerda
+  - PernaDireita
+  - BracoEsquerdo
+  - BracoDireito
   layers:
   - Default
   - TransparentFX

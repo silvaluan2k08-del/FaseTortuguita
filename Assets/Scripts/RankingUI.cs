@@ -37,28 +37,46 @@ public class RankingUI : MonoBehaviour
     // Exibe os 10 melhores jogadores
     public void AtualizarRanking()
     {
+
+
+
+        if (textoRanking == null)
+        {
+            Debug.LogError("TextoRanking não foi atribuído!");
+            return;
+        }
+
         var jogadores = RankingManager.CarregarRanking();
+
+        if (jogadores == null)
+        {
+            Debug.LogError("Ranking não foi carregado!");
+            return;
+        }
 
         StringBuilder texto = new StringBuilder();
 
-        texto.AppendLine("RANKING ARCOR");
+        texto.AppendLine("RANKING PROJETO ARCOR");
         texto.AppendLine();
 
         int limite = Mathf.Min(10, jogadores.Count);
 
         for (int i = 0; i < limite; i++)
         {
-            TimeSpan tempo = TimeSpan.FromSeconds(
-                jogadores[i].tempo
-            );
+            float tempo = jogadores[i].tempo;
+
+            int minutos = Mathf.FloorToInt(tempo / 60);
+            int segundos = Mathf.FloorToInt(tempo % 60);
+
+            string tempoFormatado = minutos.ToString("00") + ":" +
+                                    segundos.ToString("00");
 
             texto.AppendLine(
-                (i + 1) + "º - " +
-                jogadores[i].nome + " - " +
-                tempo.ToString(@"mm\:ss")
+                (i + 1) + " - " +
+                jogadores[i].nome.PadRight(25) +
+                tempoFormatado
             );
         }
-
         textoRanking.text = texto.ToString();
     }
 

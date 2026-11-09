@@ -2,15 +2,33 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+<<<<<<< HEAD
+<<<<<<< HEAD
     [Header("Peças colocadas")]
+=======
+    public CharacterController characterController;
+    [SerializeField] float speed = 5f;
+    /*[Header("Peças colocadas")]
+>>>>>>> 32b612ba32375b44bb201bba5ada92aeeb36a50f
+=======
+    [Header("Peças colocadas")]
+>>>>>>> ea9e8195b8c1ebda81a95aa88586bf584e546fb0
     public bool corpoColocado;
     public bool cabecaColocada;
     public bool pataColocada;
     public bool pata1Colocada;
     public bool pernaColocada;
     public bool perna1Colocada;
+<<<<<<< HEAD
+<<<<<<< HEAD
     public CharacterController characterController;
     [SerializeField] float speed = 5f;
+=======
+>>>>>>> 32b612ba32375b44bb201bba5ada92aeeb36a50f
+=======
+    public CharacterController characterController;
+    [SerializeField] float speed = 5f;
+>>>>>>> ea9e8195b8c1ebda81a95aa88586bf584e546fb0
 
     private void OnTriggerEnter(Collider other)
     {
@@ -30,6 +48,13 @@ public class PlayerController : MonoBehaviour
         //Destroy(other.gameObject); // remove a peça solta
 
     }
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    */
+>>>>>>> 32b612ba32375b44bb201bba5ada92aeeb36a50f
+=======
+>>>>>>> ea9e8195b8c1ebda81a95aa88586bf584e546fb0
     void Update()
     {
         float x = Input.GetAxis("Horizontal");
